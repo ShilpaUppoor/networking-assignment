@@ -1,0 +1,32 @@
+.add-people {
+    position: relative;
+    margin: 2%;
+    padding-bottom: 2%;
+    height: max-content;
+    font-family:Courier New;
+    background-color: #d4abeb;
+    
+    .count-me-in-button:hover,
+    .count-me-in-button:focus {
+       color: black !important;
+        border-color: black !important;
+        margin-left: 4%;
+    }
+
+    .count-me-in-button {
+        margin-left: 2%;
+    }
+}
+
+.add-person-button:hover,
+.add-person-button:focus {
+    color: white !important;
+    border-color: white !important;
+    background-color: #d4abeb;
+}
+
+.add-person-button {
+    background-color: #d4abeb;
+    border-color: white !important;
+    width: 100%;
+}

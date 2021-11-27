@@ -1,0 +1,19 @@
+.check-connection {
+    position: relative;
+    margin: 2%;
+    padding-bottom: 2%;
+    height: max-content;
+    font-family:Courier New;
+    background-color: #d4abeb;
+
+    .see-connection-button:hover,
+    .see-connection-button:focus {
+       color: black !important;
+        border-color: black !important;
+        margin-left: 4%;
+    }
+
+    .see-connection-button {
+        margin-left: 2%;
+    }
+}

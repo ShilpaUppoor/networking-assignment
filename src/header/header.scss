@@ -1,0 +1,18 @@
+.header-bar {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    height: 10%;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    z-index: 1;
+
+    .header-title {
+        color: 'black';
+        position: relative;
+        right: 4vw;
+        font-family:Courier New;
+    }
+}
