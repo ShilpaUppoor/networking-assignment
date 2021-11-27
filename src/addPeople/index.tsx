@@ -30,7 +30,7 @@ const AddPeople = () => {
         <div className='add-people'>
             <Title className='add-person-title' level={3}>
                 It is said that all people on average are six or fewer social connections away from each other.
-                What to know how you are connected to a friend?
+                Want to know how you are connected to a friend?
                 <Button
                     type='ghost'
                     className='count-me-in-button'

@@ -7,14 +7,6 @@ export const SET_FRIEND_LIST = 'SET_FRIEND_LIST';
 export const SET_ALL_PEOPLE = 'SET_ALL_PEOPLE';
 export const SET_SHORTEST_DISTANCE = 'SET_SHORTEST_DISTANCE';
 export const SET_PATH = 'SET_PATH';
-export const NO_PATH = 'NO_PATH';
-
-export const setNoPath = () => {
-    return {
-        type: NO_PATH,
-        payload: 'There is no mutual connection!'
-    };
-};
 
 export const setShortestDistance = (distance: any) => {
     return {
@@ -86,11 +78,9 @@ export const computeRelationship = (state: any) => {
             g.addEdge(friendList[i].person, friendList[i].friend);
         }
         const output = g.bfs(personName, friend);
-        if (output?.flag) {
+        if (output !== undefined) {
             dispatch(setShortestDistance(output?.shortestDistance));
             dispatch(setPath(output?.path));
-        } else {
-            dispatch(setNoPath);
         }
     };
 };

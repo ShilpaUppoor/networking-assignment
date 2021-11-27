@@ -12,7 +12,7 @@ const { Option } = Select;
 const AddPeople = () => {
     const dispatch = useDispatch();
     const connectionState = useSelector((state: any) => state.connection);
-    const { personName, allPeople, distance, path, error } = connectionState;
+    const { personName, allPeople, distance, path } = connectionState;
     const allUsers: Array<any> = uniq(allPeople);
     const [isClicked, setClicked] = useState(false);
 
@@ -73,16 +73,20 @@ const AddPeople = () => {
                     See Connection
                 </Button>
             </Form>
-            {console.log("error", !isEmpty(error))}
-            {isEmpty(error) && isClicked &&
+            {isClicked &&
                 <>
-                    <Title level={4}>
-                        The degree of seperation is {distance}
-                    </Title>
-                    <Title level={4}>
-                        The two users are connected as follows:
-                    </Title>
-                    <Text>{path}</Text>
+                    {distance === 0 ?
+                        <Title level={4}>There are no mutual connection between the two users!</Title> :
+                        <>
+                            <Title level={4}>
+                                The degree of seperation is {distance}
+                            </Title>
+                            <Title level={4}>
+                                The two users are connected as follows:
+                            </Title>
+                            <Text>{path}</Text>
+                        </>
+                    }
                 </>
             }
         </div> :

@@ -72,7 +72,6 @@ export class Graph {
         var q = new Queue();
         var shortestDistance: any;
         var path: string = '';
-        var flag: boolean = false;
 
         for (let i = 0; i < this.noOfVertices; i++) {
             visited[i] = false;
@@ -98,7 +97,6 @@ export class Graph {
                     pred[startingNode] = -1;
                     q.enqueue(neigh);
                     if (neigh === destination) {
-                        flag = true;
                         let output: any = [];
                         let crawl = destination;
                         output.push(crawl);
@@ -115,7 +113,7 @@ export class Graph {
                                 path = path + ' -> ' + output[i];
                             }
                         }
-                        return { shortestDistance: shortestDistance, path: path, flag: flag };
+                        return { shortestDistance: shortestDistance, path: path };
                     }
                 }
             }

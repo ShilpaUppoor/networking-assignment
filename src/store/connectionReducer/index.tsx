@@ -1,5 +1,4 @@
 import {
-    NO_PATH,
     SET_ALL_PEOPLE,
     SET_FRIEND,
     SET_FRIEND_LIST,
@@ -12,10 +11,9 @@ const INITIAL_STATE = {
     personName: '',
     friend: '',
     allPeople: [''],
-    distance: '',
+    distance: 0,
     path: '',
-    friendList: [{ person: '', friend: '', relationship: '' }],
-    error: ''
+    friendList: [{ person: '', friend: '', relationship: '' }]
 };
 
 const reducer = (state = INITIAL_STATE, action: any) => {
@@ -37,9 +35,6 @@ const reducer = (state = INITIAL_STATE, action: any) => {
             return { ...state, distance: action.payload };
 
         case SET_PATH:
-            return { ...state, path: action.payload };
-
-        case NO_PATH:
             return { ...state, path: action.payload };
 
         default:
